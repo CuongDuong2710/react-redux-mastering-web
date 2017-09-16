@@ -1,0 +1,27 @@
+npm install -g create-react-app
+
+Success! Created countdownchamp at Z:\react\countdownchamp
+Inside that directory, you can run several commands:
+
+  npm start
+    Starts the development server.
+
+  npm run build
+    Bundles the app into static files for production.
+
+  npm test
+    Starts the test runner.
+
+  npm run eject
+    Removes this tool and copies build dependencies, configuration files
+    and scripts into the app directory. If you do this, you can't go back!
+
+We suggest that you begin by typing:
+
+  cd countdownchamp
+  npm start
+
+Happy hacking!
+
+Npm is a package manager for node modules. Node modules are packages of javascript code that help applications run.
+ There's probably alternatives, but the command line is the quickest way to set up a project. As you continue to explore programming, you'll find the command line to be not just useful, but necessary.
