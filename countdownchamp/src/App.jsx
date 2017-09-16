@@ -12,6 +12,16 @@ class App extends Component {
       deadline: 'December 25, 2017'
     }
   }
+
+  changeDeadline() {
+    // never mutate or change state directly, component will not read render => error
+    // this.state.deadline = 'November 25, 2017
+    this.setState({deadline: 'November 25, 2017'})
+  }
+
+  // if we simply call 'this.changeDeadline' without anonymous function,
+  // it will be loop and cause crash.
+  // Arrow function allows us to call it just once
   render() {
     return (
       <div className="App">
@@ -26,7 +36,9 @@ class App extends Component {
         </div>
         <div>
           <input placeholder='new text'/>
-          <button>Submit</button>
+          <button onClick={() => this.changeDeadline()}>
+            Submit
+          </button>
         </div>
       </div>
     )
