@@ -34,3 +34,25 @@ Hi. Why is Component imported in curly brackets?
  
 The Component is imported in curly brackets because it's not the default class for the 'react' module.
 React is the default module. However, it's still exported from the same file location. When it's not the default class, but still exported, we can access it through curly brackets.
+
+============================================
+Coding Break: Updating State
+Section 2, Lecture 18
+
+Coding Break: Updating State
+
+How about a short coding break? Grab some tea if you’d like. Or just skip to the next video to keep developing countdownChamp!
+
+However, let’s take a moment to think about React state. Now that we have state introduced, let’s lay down the law on how to properly update state without breaking your awesome applications.
+
+The golden rule of React: never mutate state directly. I can’t repeat this enough. In order to change your state data, you can’t manipulate it like you would with normal variables. For example, something like `x++` or `counter += 1` would be fine in any other case. But in order to update state, you must use the setState() function and have new instances of data.
+
+It’s one of those rules that will become more clear as you continue building applications.
+
+So which state in the United States has laws that you can’t update directly?
+
+The React State.
+
+Thank you, I’ll be here all night :)
+
+Let’s keep coding!

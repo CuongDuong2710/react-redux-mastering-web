@@ -26,13 +26,17 @@ class App extends Component {
   // it will be loop and cause crash.
   // Arrow function allows us to call it just once
   render() {
+    // Clock component need to recognize a date set within application, the parent component
+    // With 'props' you pass data or state to child component from parent component
     return (
       <div className="App">
         <div className="App-title">
           Countdown to {this.state.deadline}
         </div>
         <div>
-          <Clock />
+          <Clock
+            deadline={this.state.deadline}
+          />
         </div>
         <div>
           <input 
