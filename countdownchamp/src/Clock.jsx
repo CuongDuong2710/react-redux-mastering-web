@@ -13,22 +13,30 @@ class Clock extends Component {
     // props becomes especially useful because as we update state of our parent component
     console.log('this.props', this.props)
   }
+  // It runs before the component completely renders onto the application
+  componentWillMount() {
+    this.getTimeUntil(this.props.deadline)
+  }
+  // It runs after the component has completely rendered
+  componentDidMount() {
+    setInterval(() => this.getTimeUntil(this.props.deadline), 1000)
+  }
 
   // calculate time from current time to deadline
   getTimeUntil(deadline) {
     const time = Date.parse(deadline) - Date.parse(new Date())
-    console.log('time', time)
+    // console.log('time', time)
     const seconds = Math.floor((time/1000) % 60)
     const minutes = Math.floor((time/1000/60) % 60)
     const hours = Math.floor(time/(1000*60*60) % 24)
     const days = Math.floor(time/(1000*60*60*24))
 
-    console.log('seconds', seconds, 'minutes', minutes, 'hours', hours, 'days', days)
-    this.setState({days: days})
+    // console.log('seconds', seconds, 'minutes', minutes, 'hours', hours, 'days', days)
+    this.setState({days, hours, minutes, seconds}) // key and value are the same {hours: hours}
   }
 
   render() {
-    this.getTimeUntil(this.props.deadline)
+    // this.getTimeUntil(this.props.deadline) // Uncaught RangeError: Maximum call stack size exceeded
 
     return (
       <div>
