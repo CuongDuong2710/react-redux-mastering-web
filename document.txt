@@ -90,5 +90,14 @@ Challenges:
 
     Add an alert message that pops up when the timer counts down to 0.
     Try running `npm build` for a build version and host the code on your website or any other host!
+	
+	November 25 2017
+	
+============================================
+Section 4 - Lecture 42: Introducing Redux
+
+create-react-app reminderPro
+
+npm install redux react-redux --save
 
 
