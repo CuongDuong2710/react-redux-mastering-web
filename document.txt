@@ -100,4 +100,24 @@ create-react-app reminderPro
 
 npm install redux react-redux --save
 
+The very first principles of redux. We have one huge store holding our application, is a global object that holds the application.
+It allows state to be updated by dispatch actions.
+
+Actions are just plain javascript object like this:
+
+{
+    type: ADD_REMINDER, // 'type' property tells reader what kind of action is being performed
+    payload: data // 'payload' key which holds all the data or some other key which holds all the necessary info within the javascript object which you use that action to update the store
+}
+
+Action creator which is more like a function which returns the javascript object action itself
+
+function() {
+  return {
+    type: ADD_REMINDER,
+    payload: data
+  }
+}
+
+
 
