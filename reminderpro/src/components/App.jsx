@@ -11,10 +11,11 @@ class App extends Component {
   }
 
   addReminder() {
-    console.log('this', this)
+    // console.log('this', this)
     this.props.addReminder(this.state.text)
   }
   render() {
+    console.log('this.props', this.props)
     return (
       <div className="App">
         <div className="title">
@@ -48,5 +49,18 @@ class App extends Component {
 //   return bindActionCreators({addReminder}, dispatch)
 // }
 
+// map our global state into our component by props
+function mapStateToProps(state) {
+  // console.log('state', state)
+  return {
+    reminders: state // this is because in index.js, 'reminders' is a global reducer for our entire application
+  }
+}
+
+// 1st parameter which allows us to listen to a state as an argument 
 // We're only adding 'addReminder' object as my key and value
-export default connect(null, { addReminder })(App)
+export default connect(mapStateToProps, { addReminder })(App)
+
+// The beauty of redux gives us so much power because we can access this part of our global state in any future component that we create.
+// We simply need to connet our component (App) to the global state in a similar manner. And then we can bind any action creat (addReminder) or redefined in the future
+// in order to update the state of all our components and our entire application

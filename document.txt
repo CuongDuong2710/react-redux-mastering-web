@@ -188,6 +188,11 @@ Lastly, all I have to say is Redux.
 Lecture 46 - Mapping Dispatch to Props and Binding Action Creators
 
 We can move onto connecting our component to our store and the action creator, we create to connect to our store in this component
+
+The beauty of redux gives us so much power because we can access this part of our global state in any future component that we create.
+We simply need to connet our component 'App' to the global state in a similar manner. And then we can bind any action creat or redefined in the future in order to update the state of all our components and our entire application
+
+export default connect(mapStateToProps, { addReminder })(App)
  
 
 

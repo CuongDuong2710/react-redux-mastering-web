@@ -1,4 +1,5 @@
 // --REDUCERS--What reducers do is simply take the state in action and return to entirely new instances of state.
+// 3. Add a reducer to the reducers folder that handles this action creator.
 import { ADD_REMINDER } from '../constants'
 
 const reminder = (action) => {
