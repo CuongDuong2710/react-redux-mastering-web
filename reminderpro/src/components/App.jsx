@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { addReminder } from '../actions'
+import { addReminder, deleteReminder } from '../actions'
 
 class App extends Component {
   constructor(props) {
@@ -15,6 +15,11 @@ class App extends Component {
     this.props.addReminder(this.state.text)
   }
 
+  deleteReminder(id) {
+    console.log('deleting in application', id)
+    console.log('this.props', this.props)
+  }
+
   renderReminders() {
     const { reminders } = this.props
     return (
@@ -23,7 +28,13 @@ class App extends Component {
           reminders.map(reminder => {
             return (
               <li key={reminder.id} className="list-group-item">
-                <div>{reminder.text}</div>
+                <div className="list-item">{reminder.text}</div>
+                <div
+                  className="list-item delete-button"
+                  onClick={() => this.deleteReminder(reminder.id)}
+                >
+                  &#x2715;
+                </div>
               </li>
             )
           })
@@ -78,7 +89,7 @@ function mapStateToProps(state) {
 
 // 1st parameter which allows us to listen to a state as an argument 
 // We're only adding 'addReminder' object as my key and value
-export default connect(mapStateToProps, { addReminder })(App)
+export default connect(mapStateToProps, { addReminder, deleteReminder })(App)
 
 // The beauty of redux gives us so much power because we can access this part of our global state in any future component that we create.
 // We simply need to connet our component (App) to the global state in a similar manner. And then we can bind any action creat (addReminder) or redefined in the future
