@@ -101,7 +101,7 @@ create-react-app reminderPro
 npm install redux react-redux --save
 
 The very first principles of redux. We have one huge store holding our application, is a global object that holds the application.
-It allows state to be updated by dispatch actions.
+--STORE-- It allows state to be updated by dispatch actions.
 
 Actions are just plain javascript object like this:
 
@@ -118,6 +118,51 @@ function() {
     payload: data
   }
 }
+
+============================================
+Lecture 44: Providing a Store and Introduction Reducers
+
+What the state is for global application but we need to do is set up a provider component from 'react-redux' that were passed down at the store to our entire application.
+
+what a reducer actually means in terms (điều kiện) of redux so that we can possible into the store. --REDUCERS--What reducers do is simply take the state in action and return to state.
+So reducers based on the action will modify the state in a pure way.
+
+There's a huge rule to know with reducers you must never take the state directly. This will cause hug performance errors. 
+--REDUCERS--So what we do is take the state and return entirely new instances of it rather than simply modifying it.
+
+** REMEMBER to reload your development server when you create reducers.
+
+
+
+
+
+
+
+At the end of the video, why do we import reducer from './reducers'?
+Daniel · Lecture 44 · 6 months ago
+
+The only file in that folder is index.js and the only object being exported from that file is reminders.  There is no mention of the term reducer anywhere, so why is this term used and why does it work?
+
+ David — Instructor
+· 6 months ago Answer
+
+It's convention to split the reducers, actions, constants, etc. If you import from just a folder with no file extension specified, react will look for the 'index.js' file in that folder as the default file.
+
+Providing a Store and Introducing Reducers
+abbas ashraf · Lecture 44 · 5 months ago
+
+    const reminder = (action) => {
+    return {
+    text: action.text
+    }
+    }
+
+
+whats the meaning of action.text?
+
+and where is come ?
+
+Action is an object, and text is a property within that object. It comes when a function passes an object to the reminder action creator.
 
 
 
