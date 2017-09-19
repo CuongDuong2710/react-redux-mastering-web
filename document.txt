@@ -132,11 +132,7 @@ There's a huge rule to know with reducers you must never take the state directly
 
 ** REMEMBER to reload your development server when you create reducers.
 
-
-
-
-
-
+Q&A ============================================
 
 At the end of the video, why do we import reducer from './reducers'?
 Daniel · Lecture 44 · 6 months ago
@@ -163,6 +159,29 @@ whats the meaning of action.text?
 and where is come ?
 
 Action is an object, and text is a property within that object. It comes when a function passes an object to the reminder action creator.
+
+============================================
+
+*** IMPORTANT *** Coding Break: the Three Steps to Redux
+Section 4, Lecture 45
+
+Coding Break: The Three Steps to Redux
+
+Here’s another optional coding break. Skip this article if you’re biting your nails to keep building ReminderPro.
+
+I can’t believe it, but I’m about to give away my secret formula for understanding redux!
+
+    1. Add a constant to the constants file. Something like `const GREAT_COURSE = ‘GREAT_COURSE`
+
+    2. Add an action creator to the actions folder. Return an action JavaScript object with a type of the constant you created.
+
+    3. Add a reducer to the reducers folder that handles this action creator.
+
+It’s really that simple! So just follow these three steps and you’ll stay ‘A-Ok’ whenever you have to deal with Redux.
+
+Regardless, we all love something: engineering, development, or entrepreneurship. But the one constant is that we all take action in order to succeed. Otherwise, our lives would be reduced to ‘normalcy.’
+
+Lastly, all I have to say is Redux.
 
 
 
