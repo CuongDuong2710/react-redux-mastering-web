@@ -41,8 +41,12 @@ class App extends Component {
   }
 }
 
+// That dispatcher prompts does it binds action creators that we create 'addReminder' to the overall dispatch function
+// Throughtout our whole react-redux application makes it accesible as props within this specific component.
+
 // function mapDispatchToProps(dispatch) {
 //   return bindActionCreators({addReminder}, dispatch)
 // }
 
+// We're only adding 'addReminder' object as my key and value
 export default connect(null, { addReminder })(App)

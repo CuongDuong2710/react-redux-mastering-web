@@ -184,4 +184,10 @@ Regardless, we all love something: engineering, development, or entrepreneurship
 Lastly, all I have to say is Redux.
 
 
+============================================
+Lecture 46 - Mapping Dispatch to Props and Binding Action Creators
+
+We can move onto connecting our component to our store and the action creator, we create to connect to our store in this component
+ 
+
 
