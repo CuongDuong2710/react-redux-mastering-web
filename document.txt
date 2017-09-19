@@ -193,6 +193,21 @@ The beauty of redux gives us so much power because we can access this part of ou
 We simply need to connet our component 'App' to the global state in a similar manner. And then we can bind any action creat or redefined in the future in order to update the state of all our components and our entire application
 
 export default connect(mapStateToProps, { addReminder })(App)
+
+
+============================================
+Lecture 50 - Reducing List Component
+
+removeById state question
+Calvin · Lecture 50 · 6 months ago
+
+in the reducer file, 'const removeById = (state = [] id)...' how does the app know what items are in the state when in the const it is set to equal an empty array?
+David Katz
+David — Instructor
+· 6 months ago
+
+It's not always an empty array. This assignment in the parameter only happens if the passed array parameter is null or empty. Since state is usually not empty, the items array is usually valid.
+Mark as helpful (1) 
  
 
 
