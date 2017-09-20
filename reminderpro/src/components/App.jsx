@@ -91,6 +91,7 @@ class App extends Component {
 // }
 
 // map our global state into our component by props
+// You do so with the mapStateToProps function. This is redux's way of taking its state and mapping it onto a specific component's 
 function mapStateToProps(state) {
   // console.log('state', state)
   return {
