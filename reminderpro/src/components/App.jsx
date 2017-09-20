@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { addReminder, deleteReminder } from '../actions'
+import { addReminder, deleteReminder, clearReminder } from '../actions'
+import dateFormat from 'dateformat'
 import moment from 'moment'
 
 class App extends Component {
@@ -14,6 +15,14 @@ class App extends Component {
 
   addReminder() {
     console.log('this.state.dueDate', this.state.dueDate)
+    let currentDate = new Date() // 'YYYY-MM-DDTHH:MM:SS'
+    currentDate = dateFormat(currentDate, "isoDateTime")
+    const dueDate = this.state.dueDate
+    // console.log('currentDate: ', currentDate)
+    // console.log('dueDate: ', dueDate)
+    if (currentDate > dueDate) {
+      alert("Due date is passed")
+    }
     this.props.addReminder(this.state.text, this.state.dueDate)
   }
 
@@ -77,6 +86,12 @@ class App extends Component {
             Add Reminder
           </button>
           {this.renderReminders()}
+          <div
+            className="btn btn-danger"
+            onClick={() => this.props.clearReminder()}
+          >
+            Clear Reminders
+          </div>
         </div>
       </div>
     )
@@ -100,8 +115,8 @@ function mapStateToProps(state) {
 }
 
 // 1st parameter which allows us to listen to a state as an argument 
-// We're only adding 'addReminder' object as my key and value
-export default connect(mapStateToProps, { addReminder, deleteReminder })(App)
+// We're only adding 'addReminder' object as my key and value, bind action creator to props
+export default connect(mapStateToProps, { addReminder, deleteReminder, clearReminder })(App)
 
 // The beauty of redux gives us so much power because we can access this part of our global state in any future component that we create.
 // We simply need to connet our component (App) to the global state in a similar manner. And then we can bind any action creat (addReminder) or redefined in the future

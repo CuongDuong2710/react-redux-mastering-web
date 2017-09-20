@@ -1,6 +1,6 @@
 // --REDUCERS--What reducers do is simply take the state in action and return to entirely new instances of state.
 // 3. Add a reducer to the reducers folder that handles this action creator.
-import { ADD_REMINDER, DELETE_REMINDER } from '../constants'
+import { ADD_REMINDER, DELETE_REMINDER, CLEAR_REMINDER } from '../constants'
 import { bake_cookie, read_cookie } from 'sfcookies'
 
 const reminder = (action) => {
@@ -32,6 +32,10 @@ const reminders = (state = [], action) => {
       return reminders
     case DELETE_REMINDER:
       reminders = removeById(state, action.id)
+      bake_cookie('reminders', reminders)
+      return reminders
+    case CLEAR_REMINDER:
+      reminders = []
       bake_cookie('reminders', reminders)
       return reminders
     default:
