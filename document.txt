@@ -208,6 +208,42 @@ David — Instructor
 
 It's not always an empty array. This assignment in the parameter only happens if the passed array parameter is null or empty. Since state is usually not empty, the items array is usually valid.
 Mark as helpful (1) 
+
+
+*** INSTAL*** npm install moment --save
+
+npm install sfcookies
+
+
+*** You do so with the mapStateToProps function. This is redux's way of taking its state and mapping it onto a specific component's 
+
+// Challenges
+
+npm install dateformat
+
+https://www.w3schools.com/js/js_date_formats.asp
+
+ISO Dates (Date-Time)
+ISO dates can be written with added hours, minutes, and seconds (YYYY-MM-DDTHH:MM:SSZ):
+
+============================================
+DEPLOY APP TO HEROKU
+Z:\deployheroku\reminderpro>heroku git:remote -a cuongreminderpro
+set git remote heroku to https://git.heroku.com/cuongreminderpro.git
+
+https://cuongreminderpro.herokuapp.com/
+
+============================================
+
+GOAL COACH
+
+create-react-app goalcoach
+
+npm install redux react-redux react-router firebase --save
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap.min.css">
+
+
  
 
 
