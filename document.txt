@@ -234,14 +234,31 @@ set git remote heroku to https://git.heroku.com/cuongreminderpro.git
 https://cuongreminderpro.herokuapp.com/
 
 ============================================
-
-GOAL COACH
+Lecture 58 - GOAL COACH
 
 create-react-app goalcoach
 
 npm install redux react-redux react-router firebase --save
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap.min.css">
+
+
+Fixing React Router
+Section 5, Lecture 59
+
+Issues with react-router where 'the prop `history` is marked as required in `Router`, but its value is `undefined`?
+
+The solution is to:
+
+1) Go to package.json and make sure your react-router version is "^3.0.1": 
+
+It should match: "react-router": "^3.0.1",
+
+2) Delete your node_modules folder, run npm install, and npm start a new instance.
+
+Note: React-router 4 won't work because they are following an alternative software design pattern that does not take advantage of browserHistory.
+
+npm install react-router@3.0.1
 
 
  
