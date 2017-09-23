@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { syncHistoryWithStore, routerReducer } from 'react-router-redux'
+// import { syncHistoryWithStore, routerReducer } from 'react-router-redux'
 import { BrowserRouter, Route } from 'react-router-dom'
 import { firebaseApp } from './firebase'
 
@@ -11,6 +11,7 @@ import SignUp from './components/SignUp'
 // Create an enhanced history that syncs navigation events with the store
 // const history = syncHistoryWithStore(browserHistory)
 
+// handle state of authentication
 firebaseApp.auth().onAuthStateChanged(user => {
   if (user) {
     // navigate user to the dashboard or application
