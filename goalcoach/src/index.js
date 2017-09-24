@@ -20,6 +20,7 @@ firebaseApp.auth().onAuthStateChanged(user => {
     // navigate user to the dashboard or application
     console.log('user has signed in or up', user)
     const { email } = user
+    // call action creator 'logUser'
     store.dispatch(logUser(email))
     browserHistory.push('./app')
   } else {
