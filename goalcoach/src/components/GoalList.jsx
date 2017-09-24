@@ -12,7 +12,7 @@ class GoalList extends Component {
       let goals = []
       snap.forEach(goal => { // for each 'goal' element
         const { email, title } = goal.val()
-        goals.push({ email, title })
+        goals.push({email, title})
       })
     //   console.log('goals', goals)
       this.props.setGoals(goals)

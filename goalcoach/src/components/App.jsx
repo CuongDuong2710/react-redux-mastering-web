@@ -13,15 +13,18 @@ class App extends Component {
   render() {
     return (
       <div style={{margin: '5px'}}>
-        <h3>Goals</h3>
+        <h3>Goal Coach</h3>
         <AddGoal />
+        <hr />
+        <h4>Goals</h4>
         <GoalList />
-          <button
-            className="btn btn-danger"
-            onClick={() => this.signOut()}
-          >
-            Sign Out
-          </button>
+        <hr />
+        <button
+          className="btn btn-danger"
+          onClick={() => this.signOut()}
+        >
+          Sign Out
+        </button>
       </div>
     )
   }

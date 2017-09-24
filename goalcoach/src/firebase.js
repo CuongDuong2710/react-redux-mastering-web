@@ -11,3 +11,4 @@ const config = {
   
 export const firebaseApp = firebase.initializeApp(config)
 export const goalRef = firebase.database().ref('goals') // create node 'goals' key
+export const completeGoalRef = firebase.database().ref('completeGoals')
