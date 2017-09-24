@@ -17,6 +17,7 @@ class GoalList extends Component {
     })
   }
 
+  // We'll have an action creator that sets the goals globally in our store
   render() {
     return (
       <div>Goal List</div>
