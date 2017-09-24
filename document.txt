@@ -260,6 +260,9 @@ Note: React-router 4 won't work because they are following an alternative softwa
 
 npm install react-router@3.0.1
 
+DATA SNAPSHOT
+https://firebase.google.com/docs/reference/js/firebase.database.DataSnapshot
+
 
  
 
