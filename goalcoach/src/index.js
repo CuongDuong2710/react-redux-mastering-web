@@ -18,14 +18,14 @@ const store = createStore(reducer)
 firebaseApp.auth().onAuthStateChanged(user => {
   if (user) {
     // navigate user to the dashboard or application
-    console.log('user has signed in or up', user)
+    // console.log('user has signed in or up', user)
     const { email } = user
     // call action creator 'logUser'
     store.dispatch(logUser(email))
     browserHistory.push('./app')
   } else {
     // redirect them to the site and component whenever they're not signed in
-    console.log('user has signed out or still needs to sign in.')
+    // console.log('user has signed out or still needs to sign in.')
     browserHistory.replace('./signin')
   }
 })

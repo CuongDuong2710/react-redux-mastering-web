@@ -13,7 +13,7 @@ class AddGoal extends Component {
   addGoal() {
     console.log('this', this)
     const { title } = this.state
-    const { email } = this.props // get this.props.email from connect() function below
+    const { email } = this.props.user // get this.props.email from connect() function below
     // it will automatically update database with key random
     goalRef.push({ email , title})
   }
@@ -44,9 +44,10 @@ class AddGoal extends Component {
 
 // get state {email: "test@test.com"} from reducers and map to this.props of this component
 function mapStateToProps(state) {
-  const { email } = state
+  const { user } = state
+  console.log('state in AddGoal.jsx', state)
   return {
-    email
+    user
   }
 }
 

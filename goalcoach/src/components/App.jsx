@@ -28,7 +28,7 @@ class App extends Component {
 }
 
 function mapStateToProps(state) {
-  console.log('state', state) // state {email: "test@test.com"}
+  // console.log('state', state) // state {email: "test@test.com"}
   return {}
 }
 
