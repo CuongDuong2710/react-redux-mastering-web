@@ -45,7 +45,7 @@ class AddGoal extends Component {
 // get state {email: "test@test.com"} from reducers and map to this.props of this component
 function mapStateToProps(state) {
   const { user } = state
-  console.log('state in AddGoal.jsx', state)
+//   console.log('state in AddGoal.jsx', state)
   return {
     user
   }
